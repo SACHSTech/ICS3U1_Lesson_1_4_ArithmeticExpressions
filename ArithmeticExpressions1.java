@@ -3,6 +3,7 @@ class ArithmeticExpressions1 extends ConsoleProgram {
   /**
   * Day Age Calculator
   */
+
   public void run() {
     
     int intAge;
@@ -11,9 +12,8 @@ class ArithmeticExpressions1 extends ConsoleProgram {
     intAge = readInt("How old are you? ");
     intDays = intAge * 365;
 
-    //System.out.print("You have been alive for this many days: ");
-    System.out.println("You have been alive for this many days: " + intDays);
-    //System.out.println(intDays);
+    System.out.print("You have been alive for this many days: ");
+    System.out.println(intDays);
 
 
     // divide an int by an int will always be an int

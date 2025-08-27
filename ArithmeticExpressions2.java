@@ -15,22 +15,16 @@ class ArithmeticExpressions2 extends ConsoleProgram {
   
   public void run() {
     // Variables
-    double dblCost;
-    double dblTax;
-    double dblTotal;
-    double dblSubTotal;
+    
 
     // Inputs
-    dblCost = readDouble("How much does your plan cost per month? ");
+    
     
     // Processing
-    dblSubTotal = dblCost * 12;
-    dblTax = dblSubTotal * 0.13;
-    dblTotal = dblSubTotal + dblTax;
     
+
     // Output
-    System.out.println("The subtotal is: "+ dblSubTotal);
-    System.out.println("The tax is: "+ dblTax);
-    System.out.println("The final total for the year is: "+dblTotal);
+    
+    
   }
 }

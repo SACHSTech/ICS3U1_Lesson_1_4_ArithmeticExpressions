@@ -30,3 +30,9 @@ class ArithmeticExpressions extends ConsoleProgram {
 }
 ```
 
+## Key Notes to Remember with Division
+* int / int = int
+* int / double = double
+* double / double = double
+
+
