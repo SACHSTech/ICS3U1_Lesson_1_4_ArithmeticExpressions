@@ -69,7 +69,6 @@ BEDMAS as you would use in math class applies in code as well. This is the order
 
 **NOTE: If there are multiple instances of the same precedence, read left to right**
 
-
 ## Key Notes to Remember with Division
 * int / int = int
 * int / double = double
@@ -79,3 +78,56 @@ BEDMAS as you would use in math class applies in code as well. This is the order
 #### Example 3:
 What do you think 5 / 2 is in Java? (if they are both integers)
 Since int / int always results in an integer, it gets truncated (meaning the decimal gets removed)
+
+## Casting
+What if we want our int to be a double or your double to be an int?
+We use **casting**, which is turning something of one type into another type.
+
+To do this, we can add the type we want in between parentheses to cast to that type.
+
+### Changing `double` to `int`
+**Example 4:**
+`int x = (int)5.3`
+This changes `5.3` into `5`
+
+**Example 5:**
+```
+// x is a double
+double x = 10.3;
+
+// y is now an int with value 10
+int y = (int)x;
+```
+### Changing `int` to `double`
+Interestingly the same doesn't apply when attempting to do the same from double to int. This is referred to as **implicit casting**. This is when Java automatically casts the value correctly without the programmer needing to do so. 
+
+**NOTE: Java _will_ cast an int to a double BUT _will NOT_ cast a double to an int**
+
+**Example 6:**
+```
+// x is in integer
+int x = 5;
+
+// y is now a double with value 5.0
+double y = x;
+```
+
+**Example 7:**
+The following example wants to calculate how much money each person gets. However, it results in an _incorrect_ answer:
+```
+int dollars = 100;
+int numOfPeople = 40;
+double dollarsPerPerson = dollars / numOfPeople;
+```
+What do you think the result will be?
+<details>
+<summary> <b>Answer</b> </summary>
+  2.0
+</details>
+
+If we cast one of the variables to a double, we'll get the correct result.
+```
+int dollars = 100;
+int numOfPeople = 40;
+double dollarsPerPerson = (double)dollars / numOfPeople;
+```
