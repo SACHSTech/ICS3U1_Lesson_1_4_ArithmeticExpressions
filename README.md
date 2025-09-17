@@ -24,8 +24,7 @@ class ArithmeticExpressions extends ConsoleProgram {
     intAge = readInt("How old are you? ");
     intDays = intAge * 365;
 
-    System.out.print("You have been alive for this many days: ");
-    System.out.println(intDays);
+    System.out.print("You have been alive for this many days: " + intDays);
   }
 }
 ```
@@ -34,5 +33,28 @@ class ArithmeticExpressions extends ConsoleProgram {
 * int / int = int
 * int / double = double
 * double / double = double
+
+## Increment / Decrement
+It is very common in programming to want to add one or subtract one to a variable.
+There are a couple ways to achieve this:
+```
+int counter = 1;
+counter = counter + 1;
+```
+Here, we are adding one to the `counter` variable. In the first line, `counter` is assigned the value `1`. In the next line, it is reassigning the value of `counter` to `2`.
+
+Instead of writing `counter = counter + 1`. There's a shortcut:
+`counter++;`
+
+Similarly, we can use the same idea to decrement by 1:
+`counter--`
+
+### Example 2:
+What would be stored in the `daysUntilSummer` variable?
+```
+int daysUntilSummer = 180;
+daysUntilSummer--;
+```
+
 
 
