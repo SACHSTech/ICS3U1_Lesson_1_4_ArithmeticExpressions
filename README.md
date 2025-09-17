@@ -29,11 +29,6 @@ class ArithmeticExpressions extends ConsoleProgram {
 }
 ```
 
-## Key Notes to Remember with Division
-* int / int = int
-* int / double = double
-* double / double = double
-
 ## Increment / Decrement
 It is very common in programming to want to add one or subtract one to a variable.
 There are a couple ways to achieve this:
@@ -56,5 +51,31 @@ int daysUntilSummer = 180;
 daysUntilSummer--;
 ```
 
+## Other Shortcuts
+It is also common to want to modify the current value by adding/subtracting/multiplying/dividing another value.
+
+| Operation | Shortcut |
+| --------- | -------- |
+| `x = x + y` | `x += y` |
+| `x = x - y` | `x -= y` |
+| `x = x * y` | `x += y` |
+| `x = x / y` | `x /= y` |
+
+## Order of Operation
+BEDMAS as you would use in math class applies in code as well. This is the order of operations that applies:
+| Parentheses | `()` |
+| Multiplication and Division | `*` `/` `%` |
+| Addition and Subtraction | `+` `-` |
+
+**NOTE: If there are multiple instances of the same precedence, read left to right**
 
 
+## Key Notes to Remember with Division
+* int / int = int
+* int / double = double
+* double / int = double
+* double / double = double
+
+#### Example 3:
+What do you think 5 / 2 is in Java? (if they are both integers)
+Since int / int always results in an integer, it gets truncated (meaning the decimal gets removed)
