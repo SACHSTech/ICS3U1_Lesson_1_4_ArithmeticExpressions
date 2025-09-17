@@ -63,9 +63,10 @@ It is also common to want to modify the current value by adding/subtracting/mult
 
 ## Order of Operation
 BEDMAS as you would use in math class applies in code as well. This is the order of operations that applies:
-| Parentheses | `()` |
-| Multiplication and Division | `*` `/` `%` |
-| Addition and Subtraction | `+` `-` |
+
+1. Parentheses `()`
+2. Multiplication and Division `*` `/` `%`
+3.  Addition and Subtraction `+` `-`
 
 **NOTE: If there are multiple instances of the same precedence, read left to right**
 
