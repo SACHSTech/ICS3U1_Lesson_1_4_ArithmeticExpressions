@@ -76,14 +76,14 @@ BEDMAS as you would use in math class applies in code as well. This is the order
 * double / double = double
 
 #### Example 3:
-What do you think 5 / 2 is in Java? (if they are both integers)
+What do you think 5 / 2 is in Java? (if they are both integers)  
 Since int / int always results in an integer, it gets truncated (meaning the decimal gets removed)
 
 ## Casting
-What if we want our int to be a double or your double to be an int?
-We use **casting**, which is turning something of one type into another type.
+What if we want our int to be a double or your double to be an int?  
+We use **casting**, which is turning something of one type into another type.  
 
-To do this, we can add the type we want in between parentheses to cast to that type.
+To do this, we can add the type we want in between parentheses to cast to that type.  
 
 ### Changing `double` to `int`
 **Example 4:**
