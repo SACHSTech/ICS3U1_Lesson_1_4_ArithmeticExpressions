@@ -12,7 +12,7 @@ Here are some math operators you can use in your equations:
 |% | modulus - whole number division BUT instead of finding the answer, it finds the remainder.|
 
 ## Example 1
-```
+```java
 class ArithmeticExpressions extends ConsoleProgram {
   
   public void run() {
@@ -32,7 +32,7 @@ class ArithmeticExpressions extends ConsoleProgram {
 ## Increment / Decrement
 It is very common in programming to want to add one or subtract one to a variable.
 There are a couple ways to achieve this:
-```
+```java
 int counter = 1;
 counter = counter + 1;
 ```
@@ -46,7 +46,7 @@ Similarly, we can use the same idea to decrement by 1:
 
 ### Example 2:
 What would be stored in the `daysUntilSummer` variable?
-```
+```java
 int daysUntilSummer = 180;
 daysUntilSummer--;
 ```
@@ -76,11 +76,12 @@ BEDMAS as you would use in math class applies in code as well. This is the order
 * double / int = double
 * double / double = double
 
-#### Example 3:
+### Example 3:
 What do you think 5 / 2 is in Java? (if they are both integers)  
 Since int / int always results in an integer, it gets truncated (meaning the decimal gets removed)
 
-## Casting in Java
+# Casting
+
 Sometimes we want to change a value from one type to another.  
 This process is called **casting**.
 
