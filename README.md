@@ -80,42 +80,55 @@ BEDMAS as you would use in math class applies in code as well. This is the order
 What do you think 5 / 2 is in Java? (if they are both integers)  
 Since int / int always results in an integer, it gets truncated (meaning the decimal gets removed)
 
-## Casting
-What if we want our int to be a double or your double to be an int?  
-We use **casting**, which is turning something of one type into another type.  
+## Casting in Java
+Sometimes we want to change a value from one type to another.  
+This process is called **casting**.
 
-To do this, we can add the type we want in between parentheses to cast to that type.  
+We can add the type we want in parentheses to explicitly cast to that type.
 
-### Changing `double` to `int`
-**Example 4:**
-`int x = (int)5.3`
-This changes `5.3` into `5`
+## Changing `double` to `int` (explicit casting)
 
-**Example 5:**
+When converting from a larger type to a smaller type (like `double` → `int`), Java does **not** do it automatically because information could be lost.  
+You must write the cast yourself. This is called a **narrowing conversion**.
+
+**Example 1:**
+```java
+int x = (int)5.3;   // x becomes 5
 ```
-// x is a double
+Notice this **truncates** the decimal, it does *not* round.  
+
+**Example 2:**
+```java
 double x = 10.3;
-
-// y is now an int with value 10
-int y = (int)x;
+int y = (int)x;     // y becomes 10
 ```
-### Changing `int` to `double`
-Interestingly the same doesn't apply when attempting to do the same from double to int. This is referred to as **implicit casting**. This is when Java automatically casts the value correctly without the programmer needing to do so. 
 
-**NOTE: Java _will_ cast an int to a double BUT _will NOT_ cast a double to an int**
+## Changing `int` to `double` (implicit casting)
 
-**Example 6:**
-```
-// x is in integer
+When converting from a smaller type to a larger type (like `int` → `double`), Java does it automatically.  
+This is called **implicit casting** or **widening**.
+
+**Example 3 (implicit):**
+```java
 int x = 5;
-
-// y is now a double with value 5.0
-double y = x;
+double y = x;   // y becomes 5.0
 ```
 
-**Example 7:**
-The following example wants to calculate how much money each person gets. However, it results in an _incorrect_ answer:
+You can also write the cast explicitly, though it isn’t required:
+
+**Example 4 (explicit, but optional):**
+```java
+int x = 5;
+double y = (double)x;   // y also becomes 5.0
 ```
+
+## Casting in Expressions
+
+Casting is especially important in arithmetic expressions.  
+Consider this example:
+
+**Example 5 (integer division issue):**
+```java
 int dollars = 100;
 int numOfPeople = 40;
 double dollarsPerPerson = dollars / numOfPeople;
@@ -126,9 +139,23 @@ What do you think the result will be?
   2.0
 </details>
 
-If we cast one of the variables to a double, we'll get the correct result.
-```
+Even though `dollarsPerPerson` is a `double`, the division is done using **integers**, so the result is `2`, stored as `2.0`.
+
+To fix this, we can cast one of the operands to a `double`:
+
+**Example 6 (correct calculation):**
+```java
 int dollars = 100;
 int numOfPeople = 40;
-double dollarsPerPerson = (double)dollars / numOfPeople;
+double dollarsPerPerson = (double)dollars / numOfPeople;  // 2.5
 ```
+
+Now the calculation is done in floating-point arithmetic, giving the correct result.
+
+## Summary Table
+
+| Conversion             | Automatic? | Name                  | Example                       |
+|-------------------------|------------|-----------------------|-------------------------------|
+| `int` → `double`       | Yes        | Widening (implicit)   | `double y = x;`               |
+| `int` → `double`       | Optional   | Explicit cast allowed | `double y = (double)x;`       |
+| `double` → `int`       | No         | Narrowing (explicit)  | `int y = (int)z;`             |
