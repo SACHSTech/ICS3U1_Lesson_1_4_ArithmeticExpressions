@@ -58,7 +58,7 @@ It is also common to want to modify the current value by adding/subtracting/mult
 | --------- | -------- |
 | `x = x + y` | `x += y` |
 | `x = x - y` | `x -= y` |
-| `x = x * y` | `x += y` |
+| `x = x * y` | `x *= y` |
 | `x = x / y` | `x /= y` |
 
 ## Order of Operation
